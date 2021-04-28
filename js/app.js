@@ -10,6 +10,7 @@ Cart.prototype.addItem = function(product, quantity) {
   // TODO: Fill in this instance method to create a new CartItem and add it to this.items
   const newItem = new CartItem(product,quantity);
   this.items.push(newItem);
+  
 };
 
 Cart.prototype.saveToLocalStorage = function() {
@@ -35,7 +36,7 @@ const Product = function(filePath, name) {
   this.filePath = filePath;
   this.name = name;
   Product.allProducts.push(this);
-};
+}
 Product.allProducts = [];
 
 function generateCatalog() {
@@ -63,3 +64,4 @@ function generateCatalog() {
 
 // Initialize the app by creating the big list of products with images and names
 generateCatalog();
+
