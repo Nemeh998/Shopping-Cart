@@ -4,7 +4,10 @@
 // Create an event listener so that when the delete link is clicked, the removeItemFromCart method is invoked.
 var table = document.getElementById('cart');
 table.addEventListener('click', removeItemFromCart);
-var cart;
+
+let cart;
+let tbody = document.getElementsByTagName(tbody);
+
 
 function loadCart() {
   const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
@@ -20,6 +23,7 @@ function renderCart() {
 
 // TODO: Remove all of the rows (tr) in the cart table (tbody)
 function clearCart() {
+
   var cartTBodyEls = document.getElementById('cart').getElementsByTagName('tbody');
   for (var tBodyEl of cartTBodyEls) {
     while (tBodyEl.firstChild) {
@@ -29,8 +33,17 @@ function clearCart() {
 }
 
 
+
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showCart() {
+  var items = JSON.parse(localStorage.getItem('cart'));
+    for (var i = 0; i < items.length; i++) {
+      let trElemet = document.createElement('tr');
+    tbody.appendChild(trElemet);
+      let tdElement = document.createElement('td');
+      trElemet.appendChild(tdElement);
+      tdElement.textContent = 'x';
+    }
 
   // TODO: Find the table body
 
