@@ -42,22 +42,18 @@ function handleSubmit(event) {
 
 
 // TODO: Add the selected item and quantity to the cart
-function addSelectedItemToCart() {
+function addSelectedItemToCart(event) {
   // TODO: suss out the item picked from the select list
-  //let itemSelected = event.target.selectElement.value;
-    // TODO: get the quantity
-    //const quantitySelected = event.target.Quantity.value;
+  var itemSelected = event.target[1].value;
+  // TODO: get the quantity
+  var qtyEnetered = parseInt(event.target[2].value);
   // TODO: using those, add one item to the Cart
-  const itemSelected = document.getElementById('items').value;
-  const quality = document.getElementById('quantity').value;
-  cart.addItem(itemSelected, quality);
-  console.log(cart.addItem(itemSelected, quality));
+  cart.addItem(itemSelected, qtyEnetered);
 }
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
 function updateCounter() {
- document.getElementById('itemCount');
- itemCount.value = cart.items.length;
+  document.getElementById('itemCount').innerText =  ${cart.items.length} item${cart.items.length > 1 ? 's' : ''};
 }
 
 // TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
