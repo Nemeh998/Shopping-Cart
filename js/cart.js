@@ -5,9 +5,7 @@
 var table = document.getElementById('cart');
 table.addEventListener('click', removeItemFromCart);
 
-let cart;
-let tbody = document.getElementsByTagName(tbody);
-
+var cart;
 
 function loadCart() {
   const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
