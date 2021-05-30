@@ -1,71 +1,53 @@
 <!DOCTYPE html>
-<html>
-
-  <head>
-    <title>Bus Mall Store</title>
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-
-  <body>
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fabulous Garden</title>
+    <link rel="stylesheet" href="css/resat.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
     <header>
-      <h1>Bus Mall Store</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="cart.html">Cart</a><span id="itemCount"></span></li>
-        </ul>
-      </nav>
+        <h1>My Fabulous Garden</h1>
     </header>
-
     <main>
+        <form id="form">
+            <legend>New Flowers</legend><br>
 
-      <section class="deck col-1">
-        <div class="card">
-          <header>
-            <h1>Shop Our Catalog</h1>
-          </header>
-          <div class="copy">
-            <ol>
-              <li>Select an item from our catalog and indicate how many you would like to purchase.</li>
-              <li>Once you've made your selection, click the "Add to Cart" button</li>
-              <li>When you are ready to purchase, click the "Cart" link above to view your cart and check out</li>
-            </ol>
-          </div>
-        </div>
-      </section>
+            <label for="Name">Name</label><br>
+            <input type="text" id="Name"><br>
 
-      <section class="deck col-2">
-        <div class="card">
-          <div class="copy">
-            <form id="catalog">
-              <fieldset>
-                <legend>Catalog</legend>
-                <label>
-                  <span>Item</span>
-                  <select id="items"></select>
-                </label>
-                <label>
-                  <span>Quantity</span>
-                  <input id="quantity" type="number" />
-                </label>
-                <input type="submit" value="Add To Cart" />
-              </fieldset>
-            </form>
-          </div>
-        </div>
-        <div class="card" id="cartContents"></div>
-      </section>
+            <label for="Images">Image</label><br>
+            <select name="Images" id="Images">
+                <option value="Alstroemerias">Alstroemerias</option>
+                <option value="Gardenias">Gardenias</option>
+                <option value="Orchids">Orchids</option>
+                <option value="Roses">Roses</option>
+                <option value="Sunflowers">Sunflowers</option>
+                <option value="Tulips">Tulips</option>
+                <option value="Peonies">Peonies</option>
+            </select><br>
+
+
+            <label for="Season">Season</label><br>
+            <input type="text" id="Season"><br>
+    
+
+            <button type="submit" id="Save" value="Save">Save</button>
+            <button type="Clear Ls" id="ClearLs" value="Clear">Clear Ls</button>
+        </form>
+
+        <table id="table"></table>
+
 
     </main>
-
     <footer>
-      <p>&copy;2021 ASAC 201d17</p>
+        <p>All right reseerved 2021 &copy; ASAC</p>
+
     </footer>
-
-    <script src='js/app.js'></script>
-    <script src='js/catalog.js'></script>
-  </body>
-
+    
+</body>
+<script src="js/app.js"></script>
 </html>
